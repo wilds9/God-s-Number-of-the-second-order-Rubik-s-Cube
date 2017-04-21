@@ -2,6 +2,10 @@
 
 ![cube](Mini Cube.jpg)
 
+ 
+ 
+![cube](Mini Cube.jpg)
+
 ##上帝之数是什么？
 简单的来说就是：任意组合的魔方的最小还原步数。
 
