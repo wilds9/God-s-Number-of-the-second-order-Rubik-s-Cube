@@ -3,7 +3,7 @@ package CubePackage;
 class Cube 
 {
 	private int[] cube_state = new int[16];
-	//pf¡úperfect »¹Ô­×´Ì¬
+	//pfâ†’perfect è¿˜åŸçŠ¶æ€
 	private int cube_pf[]={0,1,2,3,4,5,6,7,3,3,3,3,3,3,3,3};
 		
 	public Cube(){ 
@@ -11,13 +11,13 @@ class Cube
 			cube_state[i]=cube_pf[i];		
 	}
 
-	//³õÊ¼»¯
+	//åˆå§‹åŒ–
 	public void clear(){ 
 		for(int i=0;i<16;i++)
 			cube_state[i]=cube_pf[i];		
 	}
 
-	//Êä³ö£¬µ÷ÊÔµÄÊ±ºò²ÅÓÃ
+	//è¾“å‡ºï¼Œè°ƒè¯•çš„æ—¶å€™æ‰ç”¨
 	public void printout(){
 		for(int i=0;i<16;i++)
 		{
@@ -26,7 +26,7 @@ class Cube
 		System.out.println();
 	}
 
-	//°Ñ·½¿éµÄÎ»ÖÃ×ª»»Îª0-5039Ö®¼äµÄÊı£¬A±íÊ¾È«ÅÅÁĞ
+	//æŠŠæ–¹å—çš„ä½ç½®è½¬æ¢ä¸º0-5039ä¹‹é—´çš„æ•°ï¼ŒAè¡¨ç¤ºå…¨æ’åˆ—
 	public int getNum_A()
 	{
 		int[] aIn = new int [8];
@@ -64,7 +64,7 @@ class Cube
 	    return bIn;
 		
 	}
-	//°Ñ·½¿éµÄ·½Ïò×ª»»Îª0-2186Ö®¼äµÄÊı£¬T±íÊ¾Èı½øÖÆ
+	//æŠŠæ–¹å—çš„æ–¹å‘è½¬æ¢ä¸º0-2186ä¹‹é—´çš„æ•°ï¼ŒTè¡¨ç¤ºä¸‰è¿›åˆ¶
 	public int getNum_T()
 	{
 		int bIn=0;
@@ -75,7 +75,7 @@ class Cube
 	    return bIn;
 	}
 
-	//½ÓÏÂÀ´ÊÇÈıÖÖ·½Ïò×ª»»£¬XÖá¡¢YÖá¡¢ZÖá
+	//æ¥ä¸‹æ¥æ˜¯ä¸‰ç§æ–¹å‘è½¬æ¢ï¼ŒXè½´ã€Yè½´ã€Zè½´
 	private int fx_x(int aIn)
 	{
 		int bIn=0;
@@ -100,7 +100,7 @@ class Cube
 		else if(aIn==3)bIn=3;
 		return(bIn);
 	}
-	//ÏÂÃæÊÇ¾ÅÖÖ±ä»¯¡£1£ºË³Ê±Õë£¬2£º180¡ã£¬3£ºÄæÊ±Õë
+	//ä¸‹é¢æ˜¯ä¹ç§å˜åŒ–ã€‚1ï¼šé¡ºæ—¶é’ˆï¼Œ2ï¼š180Â°ï¼Œ3ï¼šé€†æ—¶é’ˆ
 	private void mo_hou1(){
 	    int a=cube_state[2];
 		int a_fx=cube_state[10];
@@ -228,7 +228,7 @@ class Cube
 		case 6:mo_you1();break;
 		case 7:mo_you2();break;
 		case 8:mo_you3();break;
-		default:System.out.println("SwitchÓï¾ä±¨´í" );
+		default:System.out.println("Switchè¯­å¥æŠ¥é”™" );
 		}
 	}
 	

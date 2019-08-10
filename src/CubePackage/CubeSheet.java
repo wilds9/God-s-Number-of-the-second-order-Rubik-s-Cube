@@ -1,11 +1,11 @@
 package CubePackage;
 
 class CubeSheet {
-	//Ïàµ±ÓÚÖ®Ç°CÖĞµÄºê¶¨Òå
+	//ç›¸å½“äºä¹‹å‰Cä¸­çš„å®å®šä¹‰
 	public static int STEP = 11;
 	private char [][][] cube_sheet = new char [5040][2187][STEP];
 
-	//±í¸ñµÄ³õÊ¼»¯
+	//è¡¨æ ¼çš„åˆå§‹åŒ–
 	public CubeSheet()
 	{
 		int aIn;
@@ -23,7 +23,7 @@ class CubeSheet {
 	    cube_sheet[0][2186][STEP-2]=2;
 	}
 
-	//¼ÆÊı
+	//è®¡æ•°
 	public int count()
 	{
 	    int cIn=0;
@@ -33,14 +33,14 @@ class CubeSheet {
 	        {
 				if(cube_sheet[aIn][bIn][STEP-1]!=0)
 	            {
-	                cIn++;//²»µÈºÅ¿ÉÒÔÈ¥µô
+	                cIn++;//ä¸ç­‰å·å¯ä»¥å»æ‰
 	            }
 	        }
 	    }
 	    return cIn;
 	}
 
-	//Ôö¼Ó¼ÇÂ¼
+	//å¢åŠ è®°å½•
 	public void add(int xIn,int yIn,char[] aIn)
 	{
         if(cube_sheet[xIn][yIn][STEP-1]==0)
@@ -52,7 +52,7 @@ class CubeSheet {
         }
 	}
 
-	//·µ»ØstepµÄÖµ
+	//è¿”å›stepçš„å€¼
 	public static int getSTEP(){
 		return STEP;
 	}	

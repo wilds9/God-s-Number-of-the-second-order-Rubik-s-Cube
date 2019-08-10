@@ -11,12 +11,12 @@ public class Window extends JFrame implements ActionListener
 	/* * */
 	private static final long serialVersionUID = 1L;
 	private JTextField myTextField = new JTextField(15);
-	private JButton myButton = new JButton("¿ªÊ¼ÔËËã");
-	private JLabel myLabel = new JLabel("¡¡¡¡ÇëÊäÈë1-11Ö®¼äµÄÕûÊı¡¡¡¡",JLabel.CENTER);
-	private JLabel Information = new JLabel("author£ºblog.dexollie.cn",JLabel.CENTER);
-	private JLabel Title = new JLabel("¶ş½×Ä§·½¡°ÉÏµÛÖ®Êı¡±µÄÑéÖ¤",JLabel.CENTER);
-	private JLabel Time = new JLabel("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡",JLabel.CENTER);
-	private JLabel aboutTime = new JLabel("(9²½´óÔ¼12Ãë£¬Ö®ºóÃ¿²½x6£©",JLabel.CENTER);
+	private JButton myButton = new JButton("å¼€å§‹è¿ç®—");
+	private JLabel myLabel = new JLabel("ã€€ã€€è¯·è¾“å…¥1-11ä¹‹é—´çš„æ•´æ•°ã€€ã€€",JLabel.CENTER);
+	private JLabel Information = new JLabel("<html><body>Author's Information<br>Home Page: http://dxnotes.com<br>Email: wildsandalwood9@gmail.com</body></html>",JLabel.LEFT);
+	private JLabel Title = new JLabel("äºŒé˜¶é­”æ–¹â€œä¸Šå¸ä¹‹æ•°â€çš„éªŒè¯",JLabel.CENTER);
+	private JLabel Time = new JLabel("ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€",JLabel.CENTER);
+	private JLabel aboutTime = new JLabel("(9æ­¥å¤§çº¦8ç§’ï¼Œä¹‹åæ¯æ­¥x6ï¼‰",JLabel.CENTER);
 
 	
 	public Window()
@@ -24,7 +24,7 @@ public class Window extends JFrame implements ActionListener
 		setTitle("Mini Cube God's Number Verification");
 		setLayout(new FlowLayout());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(230,210);
+		setSize(240,230);
 		setLocation(400,300);
 		add(Title);
 		add(myTextField);
@@ -55,12 +55,12 @@ public class Window extends JFrame implements ActionListener
 			long startTime=System.currentTimeMillis(); 		
 			result = myWork.mainWork();
 			long endTime=System.currentTimeMillis();
-			Time.setText("ÔËĞĞÊ±¼ä£º" + (endTime-startTime) + "ms");
-			myLabel.setText("ÍÆÑİ "+(int)temp+" ²½£¬¹²ÓĞ: " + result + " Ìõ½á¹û");
+			Time.setText("è¿è¡Œæ—¶é—´ï¼š" + (endTime-startTime) + "ms");
+			myLabel.setText("æ¨æ¼” "+(int)temp+" æ­¥ï¼Œå…±æœ‰: " + result + " æ¡ç»“æœ");
 		}
 		else
 		{
-			myLabel.setText("¡¡¡¡¡¡ÊäÈë²»ºÏ·¨£¡¡¡¡¡¡¡");
+			myLabel.setText("ã€€ã€€ã€€è¾“å…¥ä¸åˆæ³•ï¼ã€€ã€€ã€€");
 			
 			String arg1 = new String();
 			arg1 = "";

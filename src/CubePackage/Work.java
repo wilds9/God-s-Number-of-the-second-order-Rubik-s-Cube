@@ -13,14 +13,14 @@ class Work {
 		nStep=myText;
 	}
 	
-	public int mainWork()//²»Çå³şÎªÊ²Ã´·ÇµÃ¼ÓÉÏstatic
+	public int mainWork()//ä¸æ¸…æ¥šä¸ºä»€ä¹ˆéå¾—åŠ ä¸Šstatic
 	{
 		Cube myCube = new Cube();
 		CubeSheet myCubeSheet = new CubeSheet();
 		
 		char[] pathway = new char[step];
 		for(int i=0;i<step;i++)pathway[i]=0;
-		pathway[step-1]=1;//´Ó0,0,¡­¡­,1¿ªÊ¼¹¤×÷
+		pathway[step-1]=1;//ä»0,0,â€¦â€¦,1å¼€å§‹å·¥ä½œ
 		
 		int dIn = 0;
 		int x=0;int y=0;
@@ -38,7 +38,7 @@ class Work {
 	            }
 	            else break;
 	        }
-        	//Õâ¼¸ĞĞÓÃÓÚÑéÖ¤¡°JinWei¡±¡¢"stop"·½·¨Õı³£ÔËĞĞ
+        	//è¿™å‡ è¡Œç”¨äºéªŒè¯â€œJinWeiâ€ã€"stop"æ–¹æ³•æ­£å¸¸è¿è¡Œ
 	        /*for(int i=0;i<step;i++)
 	        {
 	        	System.out.print(pathway[i] + ",");
@@ -50,13 +50,13 @@ class Work {
 	        y=myCube.getNum_T();
 	        myCubeSheet.add(x,y,pathway);
 	        if(stop(pathway,nStep)){break;}
-	        //µÚ¶ş¸ö²ÎÊıÊÇ¹Ø¼ü£¬È±ÉÙÁË²»ÄÜĞÎ³Éµİ¹é
+	        //ç¬¬äºŒä¸ªå‚æ•°æ˜¯å…³é”®ï¼Œç¼ºå°‘äº†ä¸èƒ½å½¢æˆé€’å½’
 	        jinwei(pathway,step-1);
 	    }
 		int result = myCubeSheet.count();	
 	    return 	result;
 	}
-	//¿ØÖÆÊ²Ã´Ê±ºòÍ£Ö¹
+	//æ§åˆ¶ä»€ä¹ˆæ—¶å€™åœæ­¢
 	private  boolean stop(char[] bIn,int aIn)
 	{
 	    int tIn;
@@ -70,7 +70,7 @@ class Work {
 	    }
 	    return true;
 	}
-	//½øÎ»
+	//è¿›ä½
 	private void jinwei(char[] bIn,int aIn)
 	{
 	    if(bIn[aIn]==9)
