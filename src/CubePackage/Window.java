@@ -13,7 +13,7 @@ public class Window extends JFrame implements ActionListener
 	private JTextField myTextField = new JTextField(15);
 	private JButton myButton = new JButton("开始运算");
 	private JLabel myLabel = new JLabel("　　请输入1-11之间的整数　　",JLabel.CENTER);
-	private JLabel Information = new JLabel("<html><body>Author's Information<br>Home Page: http://dxnotes.com<br>Email: wildsandalwood9@gmail.com</body></html>",JLabel.LEFT);
+	private JLabel Information = new JLabel("<html><body>Author's Information<br>Home Page: http://dxnotes.com<br>Email: huidexuan@gmail.com</body></html>",JLabel.LEFT);
 	private JLabel Title = new JLabel("二阶魔方“上帝之数”的验证",JLabel.CENTER);
 	private JLabel Time = new JLabel("　　　　　　　　　",JLabel.CENTER);
 	private JLabel aboutTime = new JLabel("(9步大约8秒，之后每步x6）",JLabel.CENTER);
