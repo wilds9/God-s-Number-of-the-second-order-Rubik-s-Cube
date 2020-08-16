@@ -1,20 +1,51 @@
-* 二阶魔方“上帝之数“的验证
+* God's Number of the second-order Rubik's Cube (Mini Cube)
+
 [[./images/Mini_Cube.jpg]]
 
-** 上帝之数
+** What is God's Number?
 
-上帝之数是指，还原任意状态的魔方所需的最小步数。
+The minimum number of steps required to solve the Rubik's Cube in any state is called the God's Number.
 
-三阶魔方有43,252,003,274,489,856,000（约合4.3×10的19次方）种不同的可能组合状态，但它都能在20步之内还原，于是三阶魔方的上帝之数就是20。
+There are 43,252,003,274,489,856,000 different possible states of the third-order Rubik's Cube, but they can all be restored within 20 steps, so the God's Number of the third-order Rubik's Cube is 20.
 
-二阶魔方的上帝之数为11。
+This code can prove that the God's Number of the second-order Rubik's Cube is 11.
 
-** 这段代码如何工作的？
+** How does this code work?
 
-这段代码可以推算出，由二阶魔方还原好了的状态出发，经过11步可以得到3,674,160种不同的状态，而二阶魔方正是有(5040*2187)/3=3674160种状态，这样就验证了二阶魔方的上帝之数是11。
+Starting from the restored state of the second-order Rubik's Cube, 3,674,160 different states can be obtained after 11 steps, and the second-order Rubik's Cube has exactly (5040*2187)/3=3674160 states, so the God's Number of the second-order Rubik's Cube is 11.
 
-(此项目包含了java和c两个实现，分别在src/和c_src/目录中。)
+** Running result
+*** gcc
+#+BEGIN_SRC
+$ ./compile-and-run.sh gcc
+Compiler: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+1: 10
+2: 64
+3: 385
+4: 2232
+5: 12224
+6: 62360
+7: 289896
+8: 1159968
+9: 3047716
+10: 3671516
+11: 3674160
 
-[[./images/Mini_Cube2.png]]
+real    0m6.084s
+user    0m6.007s
+sys     0m0.076s
+#+END_SRC
+*** icc
+#+BEGIN_SRC
+$ ./compile-and-run.sh icc
+Compiler: icc (ICC) 17.0.4 20170411
+1: 10
+.
+.
+.
+11: 3674160
 
-
+real    0m1.985s
+user    0m1.873s
+sys     0m0.112s
+#+END_SRC
