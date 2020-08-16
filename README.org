@@ -15,10 +15,11 @@ This code can prove that the God's Number of the second-order Rubik's Cube is 11
 Starting from the restored state of the second-order Rubik's Cube, 3,674,160 different states can be obtained after 11 steps, and the second-order Rubik's Cube has exactly (5040*2187)/3=3674160 states, so the God's Number of the second-order Rubik's Cube is 11.
 
 ** Running result
-*** gcc
+*** Mode A: 180 degree rotation is allowed
 #+BEGIN_SRC
-$ ./compile-and-run.sh gcc
-Compiler: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+$ echo y | ./compile-and-run.sh icc
+Compiler: icc (ICC) 17.0.4 20170411
+Does 180 degree rotation count as one step (y/n) ? 
 1: 10
 2: 64
 3: 385
@@ -31,21 +32,31 @@ Compiler: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 10: 3671516
 11: 3674160
 
-real    0m6.084s
-user    0m6.007s
-sys     0m0.076s
+real	0m2.142s
+user	0m1.982s
+sys	0m0.160s
 #+END_SRC
-*** icc
+*** Mode B: 180 degree rotation is not allowed
 #+BEGIN_SRC
-$ ./compile-and-run.sh icc
+$ echo n | ./compile-and-run.sh icc
 Compiler: icc (ICC) 17.0.4 20170411
-1: 10
-.
-.
-.
-11: 3674160
+Does 180 degree rotation count as one step (y/n) ? 
+1: 7
+2: 34
+3: 154
+4: 688
+5: 2944
+6: 11913
+7: 44971
+8: 159120
+9: 519628
+10: 1450216
+11: 2801068
+12: 3583604
+13: 3673884
+14: 3674160
 
-real    0m1.985s
-user    0m1.873s
-sys     0m0.112s
+real	0m2.178s
+user	0m2.026s
+sys	0m0.152s
 #+END_SRC

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 // Loop variable:
 // i: for database[5040][][]
@@ -14,7 +15,9 @@
 // y-axis points rightward
 // z-axis points downward
 
-#define MAX_STEP 11
+#define MAX_STEP 14
+
+bool allow_180_degree_rotation = true;
 
 int rotation_sequence[MAX_STEP];
 
@@ -323,9 +326,15 @@ void run(int n_in)
 
 	  for(q=1;q<=9;q++)
 	    {
+	      if( allow_180_degree_rotation)
+		{
+		  if( (q+2)/3 == (rotation_sequence[MAX_STEP-n_in+1]+2)/3 ) continue;
+		}
+		else
+		{
+		  if( q%3==2 ) continue;
+		}
 	      rotation_sequence[MAX_STEP-n_in] = q;
-
-	      if( (rotation_sequence[MAX_STEP-n_in]+2)/3 == (rotation_sequence[MAX_STEP-n_in+1]+2)/3 ) continue;
 
 	      copy_cube(cube_pre,cube);
 	      rotate[q-1]();
@@ -343,8 +352,25 @@ void run(int n_in)
 
 void main()
 {
+  int i;
+  int i_max = 14;
+  char user_input;
+
+  printf("Does 180 degree rotation count as one step (y/n) ? ");
+
+  scanf("%c",&user_input);
+
+  if(user_input=='y')
+    allow_180_degree_rotation = true;
+  else if(user_input=='n')
+    allow_180_degree_rotation = false;
+  else
+    printf("Illegal input.\nBy default, 180 degree rotation within one step is allowed.");
+  printf("\n");
+
+  if(allow_180_degree_rotation) i_max=11;
   initialize();
-  for(int i=1;i<=11;i++)
+  for(i=1;i<=i_max;i++)
     {
       run(i);
       printf("%d: %d\n",i,count());
