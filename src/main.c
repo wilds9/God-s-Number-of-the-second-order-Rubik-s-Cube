@@ -353,12 +353,13 @@ void run(int n_in)
 void main()
 {
   int i;
+  int flag;
   int i_max = 14;
   char user_input;
 
   printf("Does 180 degree rotation count as one step (y/n) ? ");
 
-  scanf("%c",&user_input);
+  flag = scanf("%c",&user_input);
 
   if(user_input=='y')
     allow_180_degree_rotation = true;

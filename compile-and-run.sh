@@ -11,7 +11,7 @@ ${COMPILER} --version | head -n 1
 
 mkdir -p build/ &&\
     cd build/ &&\
-    ${COMPILER} -o cube.out ../src/main.c &&\
+    ${COMPILER} -O3 -o cube.out ../src/main.c &&\
     cd .. &&\
     ln -sf build/cube.out &&\
     time ./cube.out
