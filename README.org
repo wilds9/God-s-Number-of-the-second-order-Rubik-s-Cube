@@ -32,9 +32,9 @@ Does 180 degree rotation count as one step (y/n) ?
 10: 3671516
 11: 3674160
 
-real    0m2.018s
-user    0m1.897s
-sys     0m0.120s
+real    0m1.997s
+user    0m1.709s
+sys     0m0.288s
 #+END_SRC
 *** Mode B: 180 degree rotation is not allowed
 #+BEGIN_SRC
@@ -56,7 +56,7 @@ Does 180 degree rotation count as one step (y/n) ?
 13: 3673884
 14: 3674160
 
-real    0m1.979s
-user    0m1.855s
-sys     0m0.124s
+real    0m1.760s
+user    0m1.484s
+sys     0m0.276s
 #+END_SRC
